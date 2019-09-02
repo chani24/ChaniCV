@@ -1,0 +1,19 @@
+body{
+  background-color:
+    #071D3F;
+  color: white;
+  text-align: center;
+  list-style: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 30px;
+
+}
+
+h1{font-family: 'Cinzel', serif;
+font-weight: bolder;
+color: #690365;}
+h2{
+  font-family: serif;
+  color: #9B0495;}
+  h3{font-family: serif;
+  color: #F91FF0;}
