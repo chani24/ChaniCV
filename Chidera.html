@@ -6,6 +6,24 @@
     <link rel="stylesheet" href="chanicv.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <script>
+function formcheck() {
+var name = document.form1.Name.value;
+var email = document.form1.Email.value;
+var Suggestions = document.form1.Suggestions.value;
+var position1 = email.indexOf("@");
+var position2 = email.lastIndexOf(".");
+
+if (name.length<4) {alert("Please enter a valid name!");
+return false;
+
+} else if (Suggestions.length<20){alert("Message must be at least 20 characters!");
+return false;
+
+} else if(position1<1 || position2<position1+2 || position2+2>=email.length ){alert("Please enter a valid email address!");
+return false;}
+}
+    </script>
   </head>
   <body>
 <h1>ANI CHIDERA</h1>
@@ -44,7 +62,7 @@
 <h2>Survey form</h2>
                  <div id="div1">
 
-                 <form name="form1" action="#" method="get"><ul>
+                 <form name="form1" action="#" method="get" onsubmit="return formcheck();"><ul>
                  <li>Name*: <input type="text" name="Name" placeholder="Enter your name....." required></input></li><br>
                <li>Email*: <input type="email" name="Email" placeholder="Enter your email....." required></input></li><br>
              <li>Suggestions*: <textarea type="text" name="Suggestions" rows="7" cols="30" placeholder="Write a message....." required></textarea><br></li>
